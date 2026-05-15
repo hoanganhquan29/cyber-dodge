@@ -6,7 +6,7 @@ export class Enemy {
 
         this.sprite = PIXI.Sprite.from('/assets/images/enemy.png')
 
-        this.sprite.scale.set(0.08)
+        this.sprite.scale.set(0.11)
 
         this.sprite.anchor.set(0.5)
 

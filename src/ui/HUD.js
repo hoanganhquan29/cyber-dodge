@@ -9,15 +9,18 @@ export class HUD {
         this.scoreText = new PIXI.Text({
             text: 'Score: 0',
             style: {
-                fill: '#ffffff',
-                fontSize: 32
-            }
+    fontFamily: 'PixelFont',
+    fill: '#ffffff',
+    fontSize: 20
+}
         })
 
         this.scoreText.x = 20
         this.scoreText.y = 20
 
         this.app.stage.addChild(this.scoreText)
+
+        this.scoreText.zIndex = 100
     }
 
     updateScore(score) {

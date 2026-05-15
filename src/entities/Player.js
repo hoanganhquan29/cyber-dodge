@@ -8,7 +8,7 @@ export class Player {
 
 this.sprite = new PIXI.Sprite(texture)
 
-        this.sprite.scale.set(3)
+        this.sprite.scale.set(0.16)
 
         this.sprite.anchor.set(0.5)
 

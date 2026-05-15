@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'PixelFont';
+    src: url('/assets/fonts/PressStart2P-Regular.ttf');
+}
 * {
     margin: 0;
     padding: 0;
@@ -7,4 +11,5 @@
 body {
     overflow: hidden;
     background: black;
+    font-family: 'PixelFont';
 }

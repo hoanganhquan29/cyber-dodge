@@ -25,6 +25,11 @@ export class Game {
             background: '#444444'
         })
 
+         await PIXI.Assets.load([
+        '/assets/images/player.png',
+        '/assets/images/enemy.png'
+    ])
+
         document.body.appendChild(this.app.canvas)
 
         this.gameManager = new GameManager(this.app)

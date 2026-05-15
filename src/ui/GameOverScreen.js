@@ -9,10 +9,11 @@ export class GameOverScreen {
         this.text = new PIXI.Text({
             text: 'GAME OVER\nPress R to Restart',
             style: {
-                fill: '#ff0000',
-                fontSize: 48,
-                align: 'center'
-            }
+    fontFamily: 'PixelFont',
+    fill: '#ff0000',
+    fontSize: 36,
+    align: 'center'
+}
         })
 
         this.text.anchor.set(0.5)
@@ -28,6 +29,8 @@ export class GameOverScreen {
     show() {
 
         this.text.visible = true
+
+        this.text.zIndex = 200
     }
 
     hide() {

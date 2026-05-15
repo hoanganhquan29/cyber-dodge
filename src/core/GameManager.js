@@ -8,6 +8,7 @@ import { StartMenu } from '../ui/StartMenu'
 import { HUD } from '../ui/HUD'
 import { GameOverScreen } from '../ui/GameOverScreen'
 import { AudioSystem } from '../systems/AudioSystem'
+import { GameplayBackground } from '../ui/GameplayBackground'
 
 export class GameManager {
 
@@ -15,11 +16,19 @@ export class GameManager {
 
         this.app = app
 
+        this.app.stage.sortableChildren = true
+
         this.input = new InputManager()
+
+        this.gameplayBackground = new GameplayBackground(this.app)
 
         this.player = new Player(640, 360)
 
         this.app.stage.addChild(this.player.sprite)
+
+        this.player.sprite.zIndex = 10
+
+        this.player.sprite.visible = false 
 
         this.enemySpawner = new EnemySpawner(this.app) 
 
@@ -33,7 +42,6 @@ this.gameOverScreen = new GameOverScreen(this.app)
 this.scoreSystem = new ScoreSystem(this.hud)
 
 this.audioSystem = new AudioSystem()
-
 
     }
 
