@@ -173,4 +173,4 @@ Thông qua dự án này, tôi đã thực hành:
 
 # Author
 
-Quân Hoàng
+Hoàng Anh Quân
