@@ -1,22 +1,8 @@
 import './styles/style.css'
-import * as PIXI from 'pixi.js'
+import { Game } from './core/Game'
 
-const app = new PIXI.Application()
+const game = new Game()
 
-await app.init({
-    width: 1280,
-    height: 720,
-    background: '#111111'
-})
+await game.init()
 
-document.body.appendChild(app.canvas)
-
-const player = new PIXI.Graphics()
-
-player.circle(0, 0, 30)
-player.fill(0x00ff00)
-
-player.x = 640
-player.y = 360
-
-app.stage.addChild(player)
+game.start()
