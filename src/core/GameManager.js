@@ -20,7 +20,6 @@ export class GameManager {
         this.player = new Player(640, 360)
 
         this.app.stage.addChild(this.player.sprite)
-        this.player.sprite.visible = false
 
         this.enemySpawner = new EnemySpawner(this.app) 
 

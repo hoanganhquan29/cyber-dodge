@@ -4,17 +4,21 @@ export class Enemy {
 
     constructor(x, y) {
 
-        this.sprite = new PIXI.Graphics()
+        this.sprite = PIXI.Sprite.from('/assets/images/enemy.png')
 
-        this.sprite.circle(0, 0, 25)
-        this.sprite.fill(0xff0000)
+        this.sprite.scale.set(0.08)
+
+        this.sprite.anchor.set(0.5)
 
         this.sprite.x = x
         this.sprite.y = y
 
         this.speed = 2
 
-        this.radius = 25
+        this.radius = 28
+
+        console.log(this.sprite)
+        this.sprite.alpha = 1
     }
 
     update(player, deltaTime) {
